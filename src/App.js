@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Gallery from './Gallery';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div id='navigation'>
+          <div id='logo'>
+          <img  style={{height: '29px'}} alt="Instagram" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" />
+          </div>
+          <div id='search'>
+          <input type="text" autocapitalize="none" placeholder="Search" value="" />
+          </div>
+          <div id='icons' style={{width: '10%'}}>
+          </div>
+      </div>
+
+      <div id='content'>
+        <Gallery />
+      </div>
     </div>
   );
 }
